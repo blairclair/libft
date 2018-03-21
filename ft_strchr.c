@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 12:41:08 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:48:47 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:17:44 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	c_char;
-	int		i;
 	size_t	wha;
 
 	wha = ft_strlen(s);

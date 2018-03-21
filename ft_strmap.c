@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/25 18:45:00 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:43:29 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:23:53 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	str = (char*)s;
 	i = 0;
-	if (s != NULL && f != NULL)
+	if (s == NULL || f == NULL)
+		return (NULL);
+	else
 	{
 		s1 = malloc(ft_strlen(s) + 1);
 		if (s1 == NULL)

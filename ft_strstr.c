@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 18:07:02 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:42:51 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:18:33 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static int		get_j(int i, int j, const char *haystack, const char *needle)
 	{
 		if (haystack[i] == needle[j])
 		{
-			j = j;
 			num++;
 		}
 		if (haystack[i] != needle[j])

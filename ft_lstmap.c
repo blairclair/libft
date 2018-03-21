@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 18:58:23 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:44:04 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:51:56 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*n_list;
 	t_list	*head;
 
-	head = n_list;
 	if (lst == NULL)
-		return (NULL);
+		return (n_list = lst);
 	n_list = (*f)(lst);
 	head = n_list;
 	while (lst->next)

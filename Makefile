@@ -6,7 +6,7 @@
 #    By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/19 20:54:26 by agrodzin          #+#    #+#              #
-#    Updated: 2018/03/21 15:13:45 by agrodzin         ###   ########.fr        #
+#    Updated: 2018/03/21 15:49:22 by agrodzin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,6 @@ clean:
 	/bin/rm -f *.o
 
 fclean:
-	/bin/rm -f $(NAME)
+	/bin/rm -f *.a *.o
 	
 re: fclean all

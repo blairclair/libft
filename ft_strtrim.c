@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 17:47:31 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:50:58 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:41:47 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char			*ft_strtrim(char const *s)
 	int		check;
 
 	check = 0;
-	if (s == NULL)
+	if (s == NULL || ((sws = (char*)malloc((ft_strlen(s) - check))) == NULL))
 		return (NULL);
 	i = 0;
 	while (s[i])

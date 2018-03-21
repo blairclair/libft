@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 18:39:17 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:44:46 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:17:27 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ char			*ft_strncpy(char *dst, const char *src, size_t len)
 	size_t	i;
 	size_t	j;
 	char	*final;
-	char	*f2;
 
 	j = 0;
 	i = 0;

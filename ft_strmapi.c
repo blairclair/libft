@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/25 19:10:06 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:50:49 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:54:31 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*s1;
 
-	if (s != NULL && f != NULL)
+	if (s == NULL || f == NULL)
+		return (NULL);
+	else
 	{
 		str = (char*)s;
 		i = 0;

@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 16:22:01 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:48:32 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 15:54:00 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	i = 0;
-	if (s1 != NULL && s2 != NULL)
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	else
 	{
 		s3 = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 		if (s3 == NULL)
