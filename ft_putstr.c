@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/25 15:20:50 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:47:29 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 18:41:41 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	ft_putstr(char *s)
 {
-	int	i;
+	int		i;
+	char	hi;
 
 	i = 0;
 	while (s[i])
 	{
-		ft_putchar(s[i]);
+		hi = s[i];
+		write(1, &hi, 1);
 		i++;
 	}
 }

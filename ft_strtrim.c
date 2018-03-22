@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 17:47:31 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/21 15:41:47 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 18:54:20 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int		is_poss(char const *c, int i)
 static char		*get_sws(const char *s, char *sws, int i, int check)
 {
 	i = 0;
-	if ((sws = (char*)malloc((ft_strlen(s) - check))) == NULL)
+	if ((sws = (char*)malloc((ft_strlen(s) / 2 - check))) == NULL)
 		return (NULL);
 	while (s[i])
 	{
@@ -81,7 +81,7 @@ char			*ft_strtrim(char const *s)
 	int		check;
 
 	check = 0;
-	if (s == NULL || ((sws = (char*)malloc((ft_strlen(s) - check))) == NULL))
+	if (s == NULL)
 		return (NULL);
 	i = 0;
 	while (s[i])
@@ -99,6 +99,8 @@ char			*ft_strtrim(char const *s)
 		i++;
 	}
 	check = 0;
+	if (((sws = (char*)malloc((ft_strlen(s) / 2 - check))) == NULL))
+		return (NULL);
 	sws = get_sws(s, sws, i, check);
 	return (sws);
 }
