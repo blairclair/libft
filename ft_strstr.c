@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 18:07:02 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/21 18:26:33 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/22 15:23:06 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,4 @@ char			*ft_strstr(const char *haystack, const char *needle)
 		haystack++;
 	}
 	return (NULL);
-
 }

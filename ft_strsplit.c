@@ -6,18 +6,17 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 10:23:42 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/22 15:10:15 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/22 15:22:24 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int		get_word_count(char const *s, char c)
 {
 	int n;
 	int	i;
-	
+
 	n = 0;
 	i = 0;
 	while (s[i])
@@ -33,7 +32,6 @@ static int		get_word_count(char const *s, char c)
 		}
 	}
 	return (n);
-
 }
 
 static int		largest_word(const char *s, char c)
@@ -41,8 +39,8 @@ static int		largest_word(const char *s, char c)
 	int i;
 	int	j;
 	int largest;
-	
-	j= 0;
+
+	j = 0;
 	largest = 0;
 	while (s[j])
 	{
@@ -73,9 +71,7 @@ static char		**hi(int i, char **st_arr, const char *s, char c)
 	{
 		l = 0;
 		while (s[i] && s[i] == c)
-		{
 			i++;
-		}
 		while (s[i] && s[i] != c)
 		{
 			st_arr[j][l] = s[i];
@@ -90,7 +86,6 @@ static char		**hi(int i, char **st_arr, const char *s, char c)
 	}
 	return (st_arr);
 }
-
 
 char			**ft_strsplit(char const *s, char c)
 {
@@ -118,6 +113,5 @@ char			**ft_strsplit(char const *s, char c)
 	}
 	st_arr[words - 1] = NULL;
 	st_arr = hi(i, st_arr, s, c);
-//	st_arr[j] = NULL;
 	return (st_arr);
 }
