@@ -6,135 +6,35 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 18:07:02 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/21 15:18:33 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 18:24:13 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		get_j(int i, int j, const char *haystack, const char *needle)
-{
-	int	num;
-	int	k;
-
-	num = 0;
-	k = ft_strlen(needle);
-	while (num < k)
-	{
-		if (haystack[i] == needle[j])
-		{
-			num++;
-		}
-		if (haystack[i] != needle[j])
-		{
-			i = i - num;
-			j = j - num;
-			num = 0;
-			break ;
-		}
-	}
-	return (j);
-}
-
-static int		get_i(int i, int j, const char *haystack, const char *needle)
-{
-	int	num;
-	int	k;
-
-	num = 0;
-	k = ft_strlen(needle);
-	while (num < k)
-	{
-		if (haystack[i] == needle[j])
-		{
-			i++;
-			j++;
-			num++;
-		}
-		else
-		{
-			i = i - num;
-			j = j - num;
-			num = 0;
-			break ;
-		}
-	}
-	return (i);
-}
-
-static int		get_num(int i, int j, const char *haystack, const char *needle)
-{
-	int	num;
-	int	k;
-
-	k = ft_strlen(needle);
-	num = 0;
-	while (num < k)
-	{
-		if (haystack[i] == needle[j])
-		{
-			num++;
-			i++;
-			j++;
-		}
-		else
-		{
-			i = i - num;
-			j = j - num;
-			num = 0;
-			break ;
-		}
-	}
-	return (num);
-}
-
-static char		*is_needle(int i, const char *haystack,
-							const char *needle, int num)
-{
-	int	j;
-	int	k;
-
-	j = 0;
-	k = ft_strlen(needle);
-	while (needle[j])
-	{
-		if (num == k)
-			return ((char*)(haystack + (i - num)));
-		if (haystack[i] == needle[j])
-		{
-			num = get_num(i, j, haystack, needle);
-			i = get_i(i, j, haystack, needle);
-			j = get_j(i, j, haystack, needle);
-		}
-		j++;
-	}
-	if (k == 1 && num == 1)
-		return ((char*)(haystack + (i - num)));
-	return (NULL);
-}
-
 char			*ft_strstr(const char *haystack, const char *needle)
 {
-	int		i;
-	int		num;
-	int		j;
-	int		k;
+	char	*h2;
+	char	*n2;
 
-	num = 0;
-	j = 0;
-	i = 0;
-	k = ft_strlen(needle);
-	if (ft_strcmp(needle, "") == 0)
-		return ((char*)haystack);
-	while (haystack[i])
+	if (*needle == '\0')
+		return ((void *)haystack);
+	while (*haystack)
 	{
-		j = 0;
-		if (is_needle(i, haystack, needle, num) != NULL)
+		if (*haystack == *needle)
 		{
-			haystack = is_needle(i, haystack, needle, num);
-			return ((char*)haystack);
+			h2 = (void *)haystack + 1;
+			n2 = (void *)needle + 1;
+			while (*h2 != '\0' && *n2 != '\0' && *h2 == *n2)
+			{
+				h2 = h2 + 1;
+				n2 = n2 + 1;
+			}
+			if (*n2 == '\0')
+				return ((void *)haystack);
 		}
-		i++;
+		haystack++;
 	}
 	return (NULL);
+
 }
