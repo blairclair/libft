@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:22:50 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/21 19:23:57 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/22 10:38:02 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int		get_len(int n)
 		n = n * -1;
 		i++;
 	}
-	while (n > 0)
+	while (n)
 	{
 		n = n / 10;
 		i++;
@@ -40,21 +40,22 @@ static char		*get_str(int n)
 	k = 0;
 	check = 0;
 	i = get_len(n);
+	str = (char*)malloc(sizeof(char) * (i + 2));
+	if (str == NULL)
+		return (NULL);
 	if (n < 0)
 	{
 		n = n * -1;
 		check = 1;
 	}
-	if ((str = (char*)malloc(sizeof(char) * (i + 2))) == NULL)	
-		return (NULL);
 	while (n > 0)
 	{
-		str[k++] = (n % 10) + '0';
+		str[i--] = (n % 10) + '0';
 		n = n / 10;
 	}
 	if (check == 1)
 		str[k++] = '-';
-	k--;
+	str[0] = '\0';
 	return (str);
 }
 
@@ -68,7 +69,7 @@ char			*ft_itoa(int n)
 	j = 0;
 	k = get_len(n) - 1;
 	str = get_str(n);
-	if ((str1 = (char*)malloc(sizeof(char) * (k + 2))) == NULL)	
+	if ((str1 = (char*)malloc(sizeof(char) * (k + 2))) == NULL)
 		return (NULL);
 	if (n == 0 || n == -0)
 	{

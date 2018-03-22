@@ -6,125 +6,118 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 10:23:42 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/19 16:49:41 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/22 15:07:03 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int		get_word_count(char const *s, char c)
 {
+	int n;
 	int	i;
-	int	count;
-	int	j;
-
-	j = 0;
+	
+	n = 0;
 	i = 0;
-	if (s[0] == c)
-		count = 0;
-	else
-		count = 1;
 	while (s[i])
 	{
 		if (s[i] == c)
+			while (s[i] == c && s[i])
+				i++;
+		else
 		{
-			count++;
-			while (s[i] == c)
+			n++;
+			while (s[i] != c && s[i])
 				i++;
 		}
-		i++;
 	}
-	return (count);
+	return (n);
+
 }
 
-static int		is_c_all(char const *s, char c)
+static int		largest_word(const char *s, char c)
 {
-	int	i;
+	int i;
 	int	j;
-
-	i = 0;
-	j = 0;
-	while (s[i])
+	int largest;
+	
+	j= 0;
+	largest = 0;
+	while (s[j])
 	{
-		if (s[i] != c)
-			j = 1;
-		i++;
+		i = 0;
+		if (s[j] == c)
+			while (s[j] == c && s[j])
+				j++;
+		while (s[j] != c && s[j])
+		{
+			i++;
+			j++;
+		}
+		if (i > largest)
+			largest = i;
 	}
-	return (j);
+	return (largest);
 }
 
 static char		**hi(int i, char **st_arr, const char *s, char c)
 {
 	int	l;
 	int	j;
+	int k;
 
+	k = 0;
 	j = 0;
-	while (s[i] && j < (get_word_count(s, c) - 1))
+	while (s[i])
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		st_arr[j] = malloc(sizeof(char) * (get_word_count(s, c) + 1));
-		if (st_arr[j] == NULL)
-			return (NULL);
 		l = 0;
+		while (s[i] && s[i] == c)
+		{
+			i++;
+		}
 		while (s[i] && s[i] != c)
 		{
 			st_arr[j][l] = s[i];
 			l++;
 			i++;
 		}
-		if (s[i] != '\0')
-			st_arr[j++][l] = '\0';
+		if ((s[i] == c))
+		{
+			st_arr[j][l] = '\0';
+			j++;
+		}
 	}
-	st_arr[j] = NULL;
 	return (st_arr);
 }
 
-static char		**get_wc_2(int i, char **st_arr, const char *s, char c)
-{
-	int	l;
-	int	j;
-
-	j = 0;
-	l = 0;
-	st_arr[j] = (char *)malloc(sizeof(char) * (get_word_count(s, c) + 1));
-	while (s[i] == c)
-		i++;
-	while (s[i])
-	{
-		st_arr[j][l] = s[i];
-		l++;
-		i++;
-	}
-	st_arr[j + 1] = NULL;
-	return (st_arr);
-}
 
 char			**ft_strsplit(char const *s, char c)
 {
 	char	**st_arr;
 	int		i;
 	int		j;
-	int		l;
+	int		words;
+	int		lg;
 
 	i = 0;
 	j = 0;
-	l = 0;
 	if (s == NULL)
 		return (NULL);
-	st_arr = (char **)malloc(sizeof(*st_arr) * (get_word_count(s, c)));
-	if (is_c_all(s, c) == 0)
-	{
-		st_arr[j] = NULL;
-		return (st_arr);
-	}
-	if (get_word_count(s, c) == 1)
-	{
-		st_arr = get_wc_2(i, st_arr, s, c);
-		return (st_arr);
-	}
+	words = get_word_count(s, c) + 1;
+	lg = largest_word(s, c) + 1;
+	st_arr = (char **)ft_memalloc(sizeof(char*) * words);
 	if (!st_arr)
 		return (NULL);
+	while (j < words)
+	{
+		st_arr[j] = (char*)ft_memalloc(sizeof(char*) * lg);
+		if (!st_arr[j])
+			return (NULL);
+		j++;
+	}
+	st_arr[words - 1] = NULL;
 	st_arr = hi(i, st_arr, s, c);
+//	st_arr[j] = NULL;
 	return (st_arr);
 }
