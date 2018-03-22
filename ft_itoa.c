@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:22:50 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/21 18:59:26 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 19:22:30 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int		get_len(int n)
 	int	i;
 
 	i = 0;
-	if (n <= 0)
+	if (n < 0)
 	{
 		n = n * -1;
 		i++;
@@ -40,14 +40,13 @@ static char		*get_str(int n)
 	k = 0;
 	check = 0;
 	i = get_len(n);
-	str = (char*)malloc(sizeof(char) * (i + 2));
-	if (str == NULL)
-		return (NULL);
 	if (n < 0)
 	{
 		n = n * -1;
 		check = 1;
 	}
+	if ((str = (char*)malloc(sizeof(char) * (i + 2))) == NULL)	
+		return (NULL);
 	while (n > 0)
 	{
 		str[k++] = (n % 10) + '0';
@@ -55,7 +54,6 @@ static char		*get_str(int n)
 	}
 	if (check == 1)
 		str[k++] = '-';
-	str[k] = '\0';
 	return (str);
 }
 
@@ -69,7 +67,7 @@ char			*ft_itoa(int n)
 	j = 0;
 	k = get_len(n) - 1;
 	str = get_str(n);
-	if ((str1 = (char*)malloc(sizeof(char) * (k + 2))) == NULL)
+	if ((str1 = (char*)malloc(sizeof(char) * (k + 2))) == NULL)	
 		return (NULL);
 	if (n == 0 || n == -0)
 	{
