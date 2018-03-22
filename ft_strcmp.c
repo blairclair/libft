@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 20:51:49 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/21 17:49:38 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 17:52:37 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	int				num;
 	unsigned char	*ss1;
 	unsigned char	*ss2;
 
