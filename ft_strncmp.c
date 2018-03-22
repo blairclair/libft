@@ -6,7 +6,7 @@
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 09:58:44 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/21 18:06:37 by agrodzin         ###   ########.fr       */
+/*   Updated: 2018/03/21 18:08:54 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	ft_strncmp(const char *s1, const char *s2, int n)
 		{
 			ss1 = ss1 + 1;
 			ss2 = ss2 + 1;
+			num++;
 		}
 		else
 				return (*ss1 - *ss2);
-		num++;
 	}
 	return (0);
 }
