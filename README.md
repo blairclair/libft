@@ -1,2 +1,6 @@
 # libft
-Libft is a project at 42 silicon valley to recreate several c standard library functions.
+Libft is a beginner project at 42 Silicon Valley.
+
+FAQ
+
+What kind of functions are in libft?
