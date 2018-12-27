@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrodzin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/22 20:01:29 by agrodzin          #+#    #+#             */
-/*   Updated: 2018/03/17 14:26:12 by agrodzin         ###   ########.fr       */
+/*   Created: 2018/04/16 11:43:49 by agrodzin          #+#    #+#             */
+/*   Updated: 2018/05/07 13:45:49 by agrodzin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 200
 
-int	ft_tolower(int c)
+struct	s_nums
 {
-	if (c >= (char)65 && c <= (char)90)
-		return (c + 32);
-	return (c);
-}
+	int		j;
+	char	*whole2;
+	int		*k;
+	int		fd2;
+	char	buf[BUFF_SIZE + 1];
+};
+
+int		get_next_line(const int fd, char **line);
+
+#endif
