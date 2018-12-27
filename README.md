@@ -1,8 +1,6 @@
 # libft
 Libft is a beginner project at 42 Silicon Valley to reprogram some c standart library functions as well as create original functions for future use.
 
-# FAQ
-
 # What kind of functions are in libft?
 
 There are three main types of functions in my libft. These are recreated versions of pre-existing libc functions, additional functions required by the project, bonus list functions, and several functions that I personally created to help with future projects.
