@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../includes/libft.h"
 
 static void		*ft_cpy_help(const char *src, size_t len, size_t i, char *final)
 {
