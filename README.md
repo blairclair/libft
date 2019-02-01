@@ -3,7 +3,7 @@ Libft is a beginner project at 42 Silicon Valley to reprogram some c standart li
 
 # What kind of functions are in libft?
 
-There are three main types of functions in my libft. These are recreated versions of pre-existing libc functions, additional functions required by the project, bonus list functions, and several functions that I personally created to help with future projects.
+There are three main types of functions in my libft. List functions, memory functions, printing functions, string functions, and miscellanious other functions. 
 
 # How do I run libft?
 
