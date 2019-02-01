@@ -10,18 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*A string printing function that uses the write system call*/
+
 #include "../includes/libft.h"
 
 void	ft_putstr(char *s)
 {
-	int		i;
-	char	hi;
-
-	i = 0;
-	while (s[i])
-	{
-		hi = s[i];
-		write(1, &hi, 1);
-		i++;
-	}
+	write(1, s, ft_strlen(s) * sizeof(char));
 }

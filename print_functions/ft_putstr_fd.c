@@ -10,16 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*A string printing function that uses the write system call and 
+takes as a parameter, the file descriptor to point to.*/
+
 #include "../includes/libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	write(fd, s, ft_strlen(s) * sizeof(char));
 }

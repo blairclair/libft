@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*A character printing function that uses the write system call*/
 #include "../includes/libft.h"
 
 void	ft_putchar(char c)
-{
+{						  
 	unsigned char	b;
 
 	b = (unsigned char)c;
