@@ -10,12 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Writes an integer to stdout.
+*/
+
 #include "../includes/libft.h"
 
 void	ft_putnbr(int n)
 {
 	int i;
-	int tempnb[10];
+	int tempnb[13];
 	int	check;
 
 	check = 0;

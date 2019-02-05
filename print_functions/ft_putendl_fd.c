@@ -12,15 +12,12 @@
 
 #include "../includes/libft.h"
 
+/*
+Writes a string and a new line to the file descriptor passed in.
+*/
+
 void	ft_putendl_fd(char const *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*takes a string and sets all of its elements up to n as 0*/
+
 #include "../includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)

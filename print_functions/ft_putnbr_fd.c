@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Writes an integer to the file descriptor passed in.
+*/
+
 #include "../includes/libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

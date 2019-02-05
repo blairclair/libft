@@ -10,8 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*A character printing function that uses the write system call*/
 #include "../includes/libft.h"
+
+/*
+Writes a character to stdout.
+*/
 
 void	ft_putchar(char c)
 {						  

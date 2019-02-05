@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*A string printing function that uses the write system call*/
+/*
+Writes a string to stdout.
+*/
 
 #include "../includes/libft.h"
 

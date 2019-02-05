@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*Returns 1 if c is a number or a letter. Otherwise it returns 0.*/
+
 #include "../includes/libft.h"
 
 int	ft_isalnum(int c)

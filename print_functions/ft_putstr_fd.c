@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*A string printing function that uses the write system call and 
-takes as a parameter, the file descriptor to point to.*/
+/*
+Writes a string to the file descriptor passed in.
+*/
 
 #include "../includes/libft.h"
 

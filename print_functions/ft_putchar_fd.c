@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*A character printing function that uses the write system cal
-and takes as a parameter, the file decriptor to write to*/
-
 #include "../includes/libft.h"
+
+/*
+Uses the write system call to write a character to the file descriptor
+passed in.
+*/
 
 void	ft_putchar_fd(char c, int fd)
 {

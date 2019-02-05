@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*preforms a string to int conversion*/
+
 #include "../includes/libft.h"
 
 int		ft_atoi(const char *str)
