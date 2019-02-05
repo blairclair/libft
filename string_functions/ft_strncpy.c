@@ -12,48 +12,31 @@
 
 #include "../includes/libft.h"
 
-static void		*ft_cpy_help(const char *src, size_t len, size_t i, char *final)
-{
-	if (ft_strlen(src) > len)
-	{
-		while (*(src + i) && i < len)
-		{
-			*(final + i) = *(src + i);
-			i++;
-		}
-	}
-	else
-	{
-		while (*(src + i))
-		{
-			*(final + i) = *(src + i);
-			i++;
-		}
-		while (i < len)
-		{
-			*(final + i) = '\0';
-			i++;
-		}
-	}
-	return (final);
-}
-
 char			*ft_strncpy(char *dst, const char *src, size_t len)
 {
+	size_t	len_dst;
 	size_t	i;
-	size_t	j;
-	char	*final;
 
-	j = 0;
 	i = 0;
-	final = dst;
-	ft_cpy_help(src, len, i, final);
-	while (*(dst + i) && i < len)
-	{
-		*(final + i) = *(dst + j);
-		j++;
-		i++;
-	}
-	i--;
+	len_dst = ft_strlen(dst);
+	while (src[i] && i < len)
+		dst[len_dst++] = src[i++];
+	dst[len_dst] = '\0';
 	return (dst);
+}
+
+#include <assert.h>
+#include <stdio.h>
+int main()
+{
+	char	buf[6];
+	char	buf2[6];
+
+	bzero(buf, strlen(buf));
+	bzero(buf2, strlen(buf2));
+	ft_strncpy(buf, "abc", 6);
+	ft_strncpy(buf2, "abc", 6);	
+	printf("my buf: %s\n", buf);
+	printf("their buf: %s\n", buf2);
+
 }

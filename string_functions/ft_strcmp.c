@@ -19,20 +19,20 @@ returns the integer difference.
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char	*ss1;
-	unsigned char	*ss2;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	ss1 = (unsigned char*)s1;
-	ss2 = (unsigned char*)s2;
-	while (*ss1 != '\0' || *ss2 != '\0')
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
+	while (*str1 != '\0' || *str2 != '\0')
 	{
-		if (*ss1 == *ss2)
+		if (*str1 == *str2)
 		{
-			ss1 = ss1 + 1;
-			ss2 = ss2 + 1;
+			str1 = str1 + 1;
+			str2 = str2 + 1;
 		}
 		else
-			return (*ss1 - *ss2);
+			return (*str1 - *str2);
 	}
 	return (0);
 }

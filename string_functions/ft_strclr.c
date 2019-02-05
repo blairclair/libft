@@ -21,13 +21,12 @@ void	ft_strclr(char *s)
 	int	i;
 
 	i = 0;
-	if (s != NULL)
+	if (!s || !*s)
+		return ;
+	while (s[i])
 	{
-		while (s[i])
-		{
-			s[i] = 0;
-			i++;
-		}
-		s[i] = '\0';
+		s[i] = 0;
+		i++;
 	}
+	s[i] = '\0';
 }

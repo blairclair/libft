@@ -12,31 +12,18 @@
 
 #include "../includes/libft.h"
 
-size_t	ft_strlcat(char *restrict s1, const char *restrict s2, size_t n)
-{
-	char	*yo;
-	char	*yo2;
-	size_t	l;
-	size_t	check;
+/*
+A more protected version of strncat.
+*/
 
-	l = n + 1;
-	yo = s1;
-	yo2 = (char*)s2;
-	while (*s1 && --l > 0)
-		s1++;
-	l = s1 - yo;
-	check = n - l;
-	if (check <= 0)
-		return (l + ft_strlen(s2));
-	while (*s2)
-	{
-		if (check > 1)
-		{
-			*s1++ = *s2;
-			check--;
-		}
-		s2++;
-	}
-	*s1 = '\0';
-	return (l + (s2 - yo2));
+size_t	ft_strlcat(char *restrict s1, const char *restrict s2, size_t dstsize)
+{
+	int	len_s1;
+	int	i;
+
+	len_s1 = ft_strlen(s1);
+	i = 0;
+	while (s2[i] && i < (dstsize - len_s1 - 1))
+		s1[len_s1++] = s2[i++];
+	return (ft_strlen(s1));
 }

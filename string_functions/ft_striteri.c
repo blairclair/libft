@@ -13,19 +13,19 @@
 #include "../includes/libft.h"
 
 /*
-Calls the function f with two parameters on every character in string s.
+Calls the function f with two parameters on every character in string str.
 */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
 	int	i;
 
 	i = 0;
-	if (s != NULL && f != NULL)
+	if (str != NULL && f != NULL)
 	{
-		while (s[i])
+		while (str[i])
 		{
-			(*f)(i, (char*)s + i);
+			(*f)(i, (char*)str + i);
 			i++;
 		}
 	}

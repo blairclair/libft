@@ -12,6 +12,12 @@
 
 #include "../includes/libft.h"
 
+/*
+Compares up to n characters of two strings
+and returns 0 if they are the same, otherwise it returns 
+the integer difference.
+*/
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*ss1;

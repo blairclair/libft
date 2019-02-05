@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Returns a duplicate of s1.
+Returns a duplicate of string s1.
 */
 
 char	*ft_strdup(const char *s1)

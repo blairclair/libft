@@ -18,16 +18,14 @@ Locates the first instance of c in string s and returns a pointer to it.
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	c_char;
 	size_t	len;
 
 	len = ft_strlen(s);
-	c_char = (char)c;
-	if (c_char == '\0')
+	if (!c)
 		return ((char*)s + len);
 	while (*s)
 	{
-		if (*s++ == c_char)
+		if (*s++ == c)
 			return (char*)s - 1;
 	}
 	return (NULL);

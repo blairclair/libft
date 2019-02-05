@@ -12,28 +12,21 @@
 
 #include "../includes/libft.h"
 
+/*
+Concatonates up to n characters of string s2 to the end of s1.
+*/
+
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	int		i;
+	int		len_s1;
 	size_t	j;
-	size_t	check;
+	size_t	len_s2;
 
-	i = 0;
 	j = 0;
-	check = 0;
-	while (s1[i])
-		i++;
-	while (s2[check])
-		check++;
-	while (j < n)
-	{
-		if (j >= check)
-			break ;
-		s1[i] = s2[j];
-		j++;
-		i++;
-	}
-	s1[i] = '\0';
-	i--;
+	len_s1 = (s1) ? ft_strlen(s1) : 0;
+	len_s2 = (s2) ? ft_strlen(s2) : 0;
+	while (s2[j] && j < n)
+		s1[len_s1++] = s2[j++];
+	s1[len_s1] = '\0';
 	return (s1);
 }

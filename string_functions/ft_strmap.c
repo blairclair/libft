@@ -13,8 +13,9 @@
 #include "../includes/libft.h"
 
 /*
-Creates and allocates a new string s1 then assignes avery character of
-s1 to the return value of a function applied to the current character of s.
+Applies the function f to each character of the string given
+as argument to create and allocate a new string 
+resulting from the successive applications of f.
 */
 
 char	*ft_strmap(char const *s, char (*f)(char))
