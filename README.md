@@ -7,8 +7,8 @@ There are three main types of functions in my libft. List functions, memory func
 
 # How do I run libft?
 
-Libft can be compiled by running make. That will create a library with all the functions stored in it named libft.a
+Libft can be compiled by running make or make re. That will create a library with all the functions stored in it named libft.a
 
 # How do I use libft?
 
-If you wish to use my libft functions, you will need to clone my repo and compile it. Once you have your libft.a, you will be able to use it in any program as long as you remember to include the path to "libft.h" in your file.
+If you wish to use my libft functions, you will need to clone my repo and compile it. Once you have your libft.a, you will be able to use any of the functions in my library in your program as long as you remember to include the path to "libft.h".
