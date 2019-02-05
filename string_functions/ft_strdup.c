@@ -12,11 +12,15 @@
 
 #include "../includes/libft.h"
 
+/*
+Returns a duplicate of s1.
+*/
+
 char	*ft_strdup(const char *s1)
 {
 	char	*str;
 
-	if ((str = (char*)malloc(ft_strlen(s1) + 1)) == NULL)
+	if ((str = (char*)ft_memalloc(ft_strlen(s1) + 1)) == NULL)
 		return (NULL);
 	ft_strcpy(str, s1);
 	return (str);

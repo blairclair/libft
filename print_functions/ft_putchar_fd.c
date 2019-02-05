@@ -19,8 +19,5 @@ passed in.
 
 void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	b;
-
-	b = (unsigned char)c;
-	write(fd, &b, 1);
+	write(fd, &c, 1);
 }

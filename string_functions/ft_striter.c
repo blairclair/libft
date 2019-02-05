@@ -12,16 +12,20 @@
 
 #include "../includes/libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+/*
+Calls the function f with one parameter on every character in string s.
+*/
+
+void	ft_striter(char *str, void (*f)(char *))
 {
 	int	i;
 
 	i = 0;
-	if (s != NULL && f != NULL)
+	if (str != NULL && f != NULL)
 	{
-		while (s[i])
+		while (str[i])
 		{
-			(*f)((char*)s + i);
+			(*f)((char*)str + i);
 			i++;
 		}
 	}

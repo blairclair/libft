@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Returns 1 if c is a number or a letter. Otherwise it returns 0.*/
+/*
+Returns 1 if c is a number or a letter and 0 if it is not.
+*/
 
 #include "../includes/libft.h"
 

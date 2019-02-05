@@ -12,20 +12,22 @@
 
 #include "../includes/libft.h"
 
+/*
+Creates and allocates a new string s1 then assignes avery character of
+s1 to the return value of a function applied to the current character of s.
+*/
+
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*str;
 	int		i;
 	char	*s1;
 
-	str = (char*)s;
 	i = 0;
 	if (s == NULL || f == NULL)
 		return (NULL);
 	else
 	{
-		s1 = malloc(ft_strlen(s) + 1);
-		if (s1 == NULL)
+		if (!(s1 = ft_memalloc(ft_strlen(s) + 1)))
 			return (NULL);
 		while (s[i])
 		{

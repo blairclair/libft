@@ -12,21 +12,23 @@
 
 #include "../includes/libft.h"
 
+/*
+Locates the first instance of c in string s and returns a pointer to it.
+*/
+
 char	*ft_strchr(const char *s, int c)
 {
 	char	c_char;
-	size_t	wha;
+	size_t	len;
 
-	wha = ft_strlen(s);
+	len = ft_strlen(s);
 	c_char = (char)c;
 	if (c_char == '\0')
-		return ((char*)s + wha);
+		return ((char*)s + len);
 	while (*s)
 	{
 		if (*s++ == c_char)
-		{
 			return (char*)s - 1;
-		}
 	}
 	return (NULL);
 }

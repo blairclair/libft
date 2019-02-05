@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*preforms a string to int conversion*/
-
 #include "../includes/libft.h"
+
+/*
+Converts a string to an integer and returns it.
+*/
 
 int		ft_atoi(const char *str)
 {

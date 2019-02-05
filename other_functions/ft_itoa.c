@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Converts an integer to a string and returns it.
+*/
+
 static int		get_len(int n)
 {
 	int	i;

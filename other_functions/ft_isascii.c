@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Returns 1 if c is an ascii value and 0 if it is not.
+*/
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 0177)

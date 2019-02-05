@@ -16,7 +16,7 @@ Writes a string to the file descriptor passed in.
 
 #include "../includes/libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(char const *str, int fd)
 {
-	write(fd, s, ft_strlen(s) * sizeof(char));
+	write(fd, str, ft_strlen(str) * sizeof(char));
 }

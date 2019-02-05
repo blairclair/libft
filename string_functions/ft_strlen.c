@@ -12,14 +12,16 @@
 
 #include "../includes/libft.h"
 
+/*
+Returns the number of characters in the string.
+*/
+
 size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }

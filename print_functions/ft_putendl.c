@@ -16,8 +16,8 @@
 Writes a string and a newline to stdout.
 */
 
-void	ft_putendl(char const *s)
+void	ft_putendl(char const *str)
 {
-	ft_putstr(s);
+	ft_putstr((char*)str);
 	ft_putchar('\n');
 }

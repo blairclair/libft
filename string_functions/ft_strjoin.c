@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Takes in two strings, allocates the exact ammount of space needed joins them.
+*/
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;

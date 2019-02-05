@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Calls the function f with two parameters on every character in string s.
+*/
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;

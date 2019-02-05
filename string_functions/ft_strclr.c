@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Sets every character in string s to 0.
+*/
+
 void	ft_strclr(char *s)
 {
 	int	i;

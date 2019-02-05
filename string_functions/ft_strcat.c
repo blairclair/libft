@@ -12,23 +12,22 @@
 
 #include "../includes/libft.h"
 
+/*
+Concatonates the string s2 to the back of s1.
+*/
+
 char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
 	int	i;
 	int	j;
 
-	i = 0;
 	j = 0;
-	while (s1[i])
-	{
-		i++;
-	}
+	if (s1)
+		i = ft_strlen(s1);
+	else
+		i = 0;
 	while (s2[j])
-	{
-		s1[i] = s2[j];
-		j++;
-		i++;
-	}
+		s1[i++] = s2[j++];
 	s1[i] = '\0';
 	return (s1);
 }

@@ -12,6 +12,11 @@
 
 #include "../includes/libft.h"
 
+/*
+If c is an uppercase letter then it returns the lowercase version.
+Otherwise it returns itself.
+*/ 
+
 int	ft_tolower(int c)
 {
 	if (c >= (char)65 && c <= (char)90)

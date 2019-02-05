@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Returns 1 if c is a letter and 0 if it is not.
+*/
+
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))

@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Copies string src onto string dst.
+*/
+
 char	*ft_strcpy(char *dst, const char *src)
 {
 	int	i;

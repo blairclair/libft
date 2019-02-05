@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Returns 1 if c is a digit and 0 if it is not.
+*/
+
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

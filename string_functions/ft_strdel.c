@@ -12,11 +12,15 @@
 
 #include "../includes/libft.h"
 
-void	ft_strdel(char **as)
+/*
+Checks if a string is NULL and then frees it and sets the pointer to NULL.
+*/
+
+void	ft_strdel(char **str)
 {
-	if (as != NULL)
+	if (str != NULL)
 	{
-		free(*as);
-		*as = NULL;
+		free(*str);
+		*str = NULL;
 	}
 }
