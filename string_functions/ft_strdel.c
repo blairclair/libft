@@ -13,7 +13,8 @@
 #include "../includes/libft.h"
 
 /*
-Checks if a string is NULL and then frees it and sets the pointer to NULL.
+Checks if a string is NULL and then frees it and sets
+the pointer to NULL.
 */
 
 void	ft_strdel(char **str)

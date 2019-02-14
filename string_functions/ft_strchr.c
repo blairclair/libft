@@ -20,6 +20,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	size_t	len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	if (!c)
 		return ((char*)s + len);

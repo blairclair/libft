@@ -14,24 +14,17 @@
 
 static int		get_word_count(char const *s, char c)
 {
-	int n;
+	int num_words;
 	int	i;
 
-	n = 0;
+	num_words = 0;
 	i = 0;
-	while (s[i])
+	while (s[i++])
 	{
 		if (s[i] == c)
-			while (s[i] == c && s[i])
-				i++;
-		else
-		{
-			n++;
-			while (s[i] != c && s[i])
-				i++;
-		}
+			num_words++;
 	}
-	return (n);
+	return (num_words);
 }
 
 static int		largest_word(const char *s, char c)
@@ -42,47 +35,39 @@ static int		largest_word(const char *s, char c)
 
 	j = 0;
 	largest = 0;
-	while (s[j])
+	while (s[j++])
 	{
-		i = 0;
 		if (s[j] == c)
-			while (s[j] == c && s[j])
-				j++;
-		while (s[j] != c && s[j])
 		{
-			i++;
-			j++;
+			if (i > largest)
+				largest = i;
+			i = 0;
 		}
-		if (i > largest)
-			largest = i;
+		i++;
 	}
 	return (largest);
 }
 
-static char		**hi(int i, char **st_arr, const char *s, char c)
+static char		**split_strings(int i, char **st_arr, const char *s, char c)
 {
-	int	l;
-	int	j;
-	int k;
+	int	let;
+	int	word;
 
-	k = 0;
-	j = 0;
+	word = 0;
+	let = 0;
+	i = 0;
 	while (s[i])
 	{
-		l = 0;
-		while (s[i] && s[i] == c)
-			i++;
-		while (s[i] && s[i] != c)
+		if (s[i] == c)
 		{
-			st_arr[j][l] = s[i];
-			l++;
-			i++;
+			st_arr[word][let] = '\0';
+			let = -1;
+			word++;
 		}
-		if ((s[i] == c))
-		{
-			st_arr[j][l] = '\0';
-			j++;
-		}
+		else
+			st_arr[word][let] = s[i];
+		i++;
+		let++;
 	}
 	return (st_arr);
 }
@@ -93,25 +78,23 @@ char			**ft_strsplit(char const *s, char c)
 	int		i;
 	int		j;
 	int		words;
-	int		lg;
+	int		largest;
 
 	i = 0;
 	j = 0;
 	if (s == NULL)
 		return (NULL);
 	words = get_word_count(s, c) + 1;
-	lg = largest_word(s, c) + 1;
-	st_arr = (char **)ft_memalloc(sizeof(char*) * words);
-	if (!st_arr)
+	largest = largest_word(s, c) + 1;
+	if ((st_arr = (char **)ft_memalloc(sizeof(char*) * words)) == NULL)
 		return (NULL);
 	while (j < words)
 	{
-		st_arr[j] = (char*)ft_memalloc(sizeof(char*) * lg);
-		if (!st_arr[j])
+		if ((st_arr[j] = (char*)ft_memalloc(sizeof(char*) * largest))== NULL)
 			return (NULL);
 		j++;
 	}
-	st_arr[words - 1] = NULL;
-	st_arr = hi(i, st_arr, s, c);
+	st_arr[j] = NULL;
+	st_arr = split_strings(i, st_arr, s, c);
 	return (st_arr);
 }

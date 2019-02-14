@@ -26,16 +26,13 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	if (s == NULL || f == NULL)
 		return (NULL);
-	else
+	if (!(s1 = ft_memalloc(ft_strlen(s) + 1)))
+		return (NULL);
+	while (s[i])
 	{
-		if (!(s1 = ft_memalloc(ft_strlen(s) + 1)))
-			return (NULL);
-		while (s[i])
-		{
-			s1[i] = (*f)(s[i]);
-			i++;
-		}
-		s1[i] = '\0';
+		s1[i] = (*f)(s[i]);
+		i++;
 	}
+	s1[i] = '\0';
 	return (s1);
 }

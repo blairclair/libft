@@ -12,6 +12,12 @@
 
 #include "../includes/libft.h"
 
+/*
+Locates the first occurence of the string need in the string haystack 
+within len amount of characters and returns a pointer to it. If not
+occurence is found then NULL is returned.
+*/
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	l2;

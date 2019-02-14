@@ -12,6 +12,11 @@
 
 #include "../includes/libft.h"
 
+/*
+Returns a substring of s starting at the variable start and continuing
+len long.
+*/
+
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
@@ -20,20 +25,10 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	if (s == NULL)
+	if (s == NULL || (s2 = (char*)ft_memalloc(len + 1)) == NULL)
 		return (NULL);
-	else
-	{
-		s2 = (char*)malloc(len + 1);
-		if (s2 == NULL)
-			return (NULL);
-		while (j < len)
-		{
-			s2[j] = s[start];
-			j++;
-			start++;
-		}
-		s2[j] = '\0';
-	}
-	return ((char*)s2);
+	while (j < len)
+		s2[j++] = s[start++];
+	s2[j] = '\0';
+	return (s2);
 }

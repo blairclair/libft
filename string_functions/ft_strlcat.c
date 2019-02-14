@@ -18,8 +18,8 @@ A more protected version of strncat.
 
 size_t	ft_strlcat(char *restrict s1, const char *restrict s2, size_t dstsize)
 {
-	int	len_s1;
-	int	i;
+	size_t	len_s1;
+	size_t	i;
 
 	len_s1 = ft_strlen(s1);
 	i = 0;

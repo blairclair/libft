@@ -13,7 +13,8 @@
 #include "../includes/libft.h"
 
 /*
-Takes in two strings, allocates the exact ammount of space needed joins them.
+Takes in two strings, allocates the exact ammount of
+space needed, and joins them.
 */
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -24,16 +25,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	else
-	{
-		s3 = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-		if (s3 == NULL)
-			return (NULL);
-		ft_strcpy(s3, s1);
-		ft_strcat(s3, s2);
-		while (s3[i])
-			i++;
-		s3[i] = '\0';
-	}
+	if ((s3 = (char*)ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1)) == NULL)
+		return (NULL);
+	ft_strcpy(s3, s1);
+	ft_strcat(s3, s2);
+	while (s3[i])
+		i++;
+	s3[i] = '\0';
 	return (s3);
 }

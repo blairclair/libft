@@ -12,6 +12,11 @@
 
 #include "../includes/libft.h"
 
+/*
+Takes a string and returns a copy without whitespace at the begining
+and end.
+*/
+
 static int		n_sws(char ws)
 {
 	int	j;

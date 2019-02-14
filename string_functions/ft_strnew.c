@@ -12,14 +12,17 @@
 
 #include "../includes/libft.h"
 
+/*
+Allocates and returns a string of a certain size.
+*/
+
 char	*ft_strnew(size_t size)
 {
 	char	*str;
 	int		i;
 
 	i = 0;
-	str = (char*)malloc(size + 1);
-	if (str == NULL)
+	if (!(str = (char*)ft_memalloc(size + 1)))
 		return (NULL);
 	while (str[i])
 	{

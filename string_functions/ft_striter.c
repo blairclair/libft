@@ -13,7 +13,8 @@
 #include "../includes/libft.h"
 
 /*
-Calls the function f with one parameter on every character in string str.
+Calls the function f with one parameter on every
+character in string str.
 */
 
 void	ft_striter(char *str, void (*f)(char *))
