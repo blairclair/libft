@@ -17,37 +17,22 @@ Takes a string and returns a copy without whitespace at the begining
 and end.
 */
 
-static int		n_sws(char ws)
+static int		is_whitespace(char ws)
 {
-	int	j;
-
-	j = 0;
-	if (ws != ' ' && ws != ',' && ws != '\n' && ws != '\t')
-	{
-		j = 1;
-	}
-	else if (ws == '\0')
-		j = 0;
-	else
-		j = 0;
-	return (j);
+	if (ws == ' ' || ws == ',' || ws == '\n' || ws == '\t')
+		return (1);
+	return (0);
 }
 
-static int		is_poss(char const *c, int i)
+static int		is_more_whitespace(char const *c, int i)
 {
-	int	count;
-
-	count = 0;
 	while (c[i])
 	{
-		if (n_sws(c[i]) == 1)
-		{
-			count = 1;
-			break ;
-		}
+		if (!is_whitespace(c[i]))
+			return (1);
 		i++;
 	}
-	return (count);
+	return (0);
 }
 
 static char		*get_sws(const char *s, char *sws, int i, int check)
@@ -57,13 +42,13 @@ static char		*get_sws(const char *s, char *sws, int i, int check)
 		return (NULL);
 	while (s[i])
 	{
-		if (n_sws(s[i]) == 1)
+		if (!is_whitespace(s[i]))
 			sws[check++] = s[i++];
-		else if (n_sws(s[i]) == 0 && n_sws(s[i - 1]) == 1 && i != 0)
+		else if (is_whitespace(s[i]) && !is_whitespace(s[i - 1]) && i != 0)
 		{
-			if (is_poss(s, i) == 1)
+			if (!is_more_whitespace(s, i))
 			{
-				while (n_sws(s[i]) == 0)
+				while (is_whitespace(s[i]))
 					sws[check++] = s[i++];
 			}
 			else
@@ -72,7 +57,7 @@ static char		*get_sws(const char *s, char *sws, int i, int check)
 				break ;
 			}
 		}
-		else if (n_sws(s[i]) == 0)
+		else if (is_whitespace(s[i]))
 			i++;
 	}
 	sws[check] = '\0';
@@ -86,24 +71,33 @@ char			*ft_strtrim(char const *s)
 	int		check;
 
 	check = 0;
-	if (s == NULL || (sws = (char*)malloc((ft_strlen(s) / 2 - check))) == NULL)
+	if (s == NULL ||
+	(sws = (char*)ft_memalloc((ft_strlen(s) / 2 - check))) == NULL)
 		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		if (n_sws(s[i]) == 0 && n_sws(s[i - 1]) == 1 && i != 0)
+		if (i != 0 && is_whitespace(s[i]) && !is_whitespace(s[i - 1]))
 		{
-			if (is_poss(s, i) == 1)
+			if (!is_more_whitespace(s, i))
 			{
-				while (n_sws(s[i]) == 0)
+				while (is_whitespace(s[i]))
 					i++;
 			}
 		}
-		else if (n_sws(s[i]) == 0)
+		else if (is_whitespace(s[i]))
 			check++;
 		i++;
 	}
 	check = 0;
 	sws = get_sws(s, sws, i, check);
 	return (sws);
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+	printf("%s", ft_strtrim("   hithere "));
 }
