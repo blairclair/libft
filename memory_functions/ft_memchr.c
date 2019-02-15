@@ -12,6 +12,11 @@
 
 #include "../includes/libft.h"
 
+/*
+Takes a string and returns a pointer to the first instance of c within
+n bytes. If no such instance exists, then NULL is returned.
+*/
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	char	*sp;

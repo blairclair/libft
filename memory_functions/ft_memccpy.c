@@ -12,6 +12,12 @@
 
 #include "../includes/libft.h"
 
+/*
+Copies n bytes of string src to string dst unless the character c
+is found in the string in which case a pointer to the byte after c is
+returned.
+*/
+
 void	*ft_memccpy(void *restrict dst, const void *restrict src,
 		int c, size_t n)
 {

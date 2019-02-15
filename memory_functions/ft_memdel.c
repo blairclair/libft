@@ -12,6 +12,11 @@
 
 #include "../includes/libft.h"
 
+/*
+Takes a memory address as a parameter, then frees it and sets it to
+NULL.
+*/
+
 void	ft_memdel(void **ap)
 {
 	if (ap != NULL)

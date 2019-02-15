@@ -28,7 +28,7 @@ static int		is_more_whitespace(char const *c, int i)
 {
 	while (c[i])
 	{
-		if (!is_whitespace(c[i]))
+		if (is_whitespace(c[i]))
 			return (1);
 		i++;
 	}
@@ -38,8 +38,6 @@ static int		is_more_whitespace(char const *c, int i)
 static char		*get_sws(const char *s, char *sws, int i, int check)
 {
 	i = 0;
-	if ((sws = (char*)malloc((ft_strlen(s) / 2 - check))) == NULL)
-		return (NULL);
 	while (s[i])
 	{
 		if (!is_whitespace(s[i]))
@@ -57,7 +55,7 @@ static char		*get_sws(const char *s, char *sws, int i, int check)
 				break ;
 			}
 		}
-		else if (is_whitespace(s[i]))
+		else
 			i++;
 	}
 	sws[check] = '\0';
@@ -71,33 +69,10 @@ char			*ft_strtrim(char const *s)
 	int		check;
 
 	check = 0;
+	i = 0;
 	if (s == NULL ||
 	(sws = (char*)ft_memalloc((ft_strlen(s) / 2 - check))) == NULL)
 		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		if (i != 0 && is_whitespace(s[i]) && !is_whitespace(s[i - 1]))
-		{
-			if (!is_more_whitespace(s, i))
-			{
-				while (is_whitespace(s[i]))
-					i++;
-			}
-		}
-		else if (is_whitespace(s[i]))
-			check++;
-		i++;
-	}
-	check = 0;
 	sws = get_sws(s, sws, i, check);
 	return (sws);
-}
-
-
-#include <stdio.h>
-
-int main()
-{
-	printf("%s", ft_strtrim("   hithere "));
 }
