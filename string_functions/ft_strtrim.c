@@ -14,7 +14,7 @@
 
 /*
 Takes a string and returns a copy without whitespace at the begining
-and end.
+and end
 */
 
 static int		is_whitespace(char ws)

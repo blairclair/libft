@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Allocates and returns a fresh t_list node
+*/
+
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*n_list;
@@ -27,7 +31,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		n_list->content_size = content_size;
-		n_list->content = malloc(content_size + 1);
+		n_list->content = ft_memalloc(content_size + 1);
 		n_list->content = ft_memcpy(n_list->content, content, content_size);
 		if (n_list->content == '\0')
 		{

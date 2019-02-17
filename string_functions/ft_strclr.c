@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Sets every character in string s to 0.
+Sets every character in string s to zero
 */
 
 void	ft_strclr(char *s)

@@ -14,7 +14,7 @@
 
 /*
 Compares up to n characters of strings s1 and s2 
-returning 1 if they are the same and 0 if not.
+returning 1 if they are the same and 0 if not
 */
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)

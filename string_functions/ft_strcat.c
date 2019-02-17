@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Concatonates the string s2 to the back of s1.
+Concatonates the string s2 to the back of s1
 */
 
 char	*ft_strcat(char *restrict str1, const char *restrict str2)

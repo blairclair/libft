@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Writes a string and a newline to stdout.
+Writes a string and a newline to stdout
 */
 
 void	ft_putendl(char const *str)

@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-A more protected version of strncat.
+A more protected version of strncat
 */
 
 size_t	ft_strlcat(char *restrict s1, const char *restrict s2, size_t dstsize)

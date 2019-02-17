@@ -14,7 +14,7 @@
 
 /*
 Compares two string and returns 0 if they are the same,
-otherwise it returns the integer difference.
+otherwise it returns the integer difference
 */
 
 int	ft_strcmp(const char *s1, const char *s2)

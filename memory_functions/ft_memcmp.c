@@ -14,7 +14,7 @@
 
 /*
 Compares two byte strings and returns zero if they are the same,
-otherwise the difference is returned.
+otherwise the difference is returned
 */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

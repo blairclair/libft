@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Allocates and returns a string of a certain size.
+Allocates and returns a string of a certain size
 */
 
 char	*ft_strnew(size_t size)

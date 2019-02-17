@@ -15,7 +15,7 @@
 /*
 Copies n bytes of string src to string dst unless the character c
 is found in the string in which case a pointer to the byte after c is
-returned.
+returned
 */
 
 void	*ft_memccpy(void *restrict dst, const void *restrict src,

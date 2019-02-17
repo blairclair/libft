@@ -11,7 +11,10 @@
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-
+/*
+Takes a string and a delimiter and returns an array of fresh strings
+split by the delimiter
+*/
 static int		get_word_count(char const *s, char c)
 {
 	int num_words;

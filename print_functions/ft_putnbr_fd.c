@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-Writes an integer to the file descriptor passed in.
+Writes an integer to the file descriptor passed in
 */
 
 #include "../includes/libft.h"

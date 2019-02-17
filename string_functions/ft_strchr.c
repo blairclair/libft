@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Locates the first instance of c in string s and returns a pointer to it.
+Locates the first instance of c in string s and returns a pointer to it
 */
 
 char	*ft_strchr(const char *s, int c)

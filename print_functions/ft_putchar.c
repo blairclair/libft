@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Writes a character to stdout.
+Writes a character to stdout
 */
 
 void	ft_putchar(char c)

@@ -15,7 +15,7 @@
 /*
 Applies the function f to each character of the string given
 as argument to create and allocate a new string 
-resulting from the successive applications of f.
+resulting from the successive applications of f
 */
 
 char	*ft_strmap(char const *s, char (*f)(char))

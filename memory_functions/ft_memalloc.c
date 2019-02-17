@@ -14,7 +14,7 @@
 
 /*
 Creates and allocates a string with the passed in size, then sets every
-element in the string to zero.
+element in the string to zero
 */
 
 void	*ft_memalloc(size_t size)

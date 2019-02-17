@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-Writes a string to stdout.
+Writes a string to stdout
 */
 
 #include "../includes/libft.h"

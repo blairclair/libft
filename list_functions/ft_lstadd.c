@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+Adds the t_list node new to the begining of t_list alst
+*/
+
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	new->next = *alst;

@@ -14,7 +14,7 @@
 
 /*
 Returns a substring of s starting at the variable start and continuing
-len long.
+len long
 */
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)

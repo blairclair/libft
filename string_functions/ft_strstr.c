@@ -14,7 +14,7 @@
 
 /*
 Returns a pointer to the first instance of the string needle in the string
-haystack. If needle is not in haystack then returns NULL.
+haystack. If needle is not in haystack then returns NULL
 */
 
 char			*ft_strstr(const char *haystack, const char *needle)

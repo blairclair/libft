@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Returns the number of characters in the string.
+Returns the number of characters in the string
 */
 
 size_t	ft_strlen(const char *str)

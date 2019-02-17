@@ -14,7 +14,7 @@
 
 /*
 Takes a memory address as a parameter, then frees it and sets it to
-NULL.
+NULL
 */
 
 void	ft_memdel(void **ap)

@@ -14,7 +14,7 @@
 
 /*
 Uses the write system call to write a character to the file descriptor
-passed in.
+passed in
 */
 
 void	ft_putchar_fd(char c, int fd)

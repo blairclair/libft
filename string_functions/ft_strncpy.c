@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Copies len number of characters of string src onto string dst.
+Copies len number of characters of string src onto string dst
 */
 
 char			*ft_strncpy(char *dst, const char *src, size_t len)

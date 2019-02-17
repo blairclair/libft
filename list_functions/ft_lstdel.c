@@ -12,6 +12,11 @@
 
 #include "../includes/libft.h"
 
+/*
+Takes in the address of a pointer to a t_list node and frees and sets 
+to NULL that node as well as its successors
+*/
+
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*n_list;

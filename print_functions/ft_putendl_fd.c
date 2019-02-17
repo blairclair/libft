@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Writes a string and a new line to the file descriptor passed in.
+Writes a string and a new line to the file descriptor passed in
 */
 
 void	ft_putendl_fd(char const *str, int fd)

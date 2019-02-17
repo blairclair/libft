@@ -13,8 +13,8 @@
 #include "../includes/libft.h"
 
 /*
-Takes in two strings, allocates the exact ammount of
-space needed, and joins them.
+Takes in two strings, allocates the exact amount of
+space needed, and joins them
 */
 
 char	*ft_strjoin(char const *s1, char const *s2)

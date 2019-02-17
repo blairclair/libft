@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Compares s1 and s2 returning 1 if they are the same and 0 if not.
+Compares s1 and s2 returning 1 if they are the same and 0 if not
 */
 
 int	ft_strequ(char const *s1, char const *s2)

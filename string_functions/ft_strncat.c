@@ -13,7 +13,7 @@
 #include "../includes/libft.h"
 
 /*
-Concatonates up to n characters of string s2 to the end of s1.
+Concatonates up to n characters of string s2 to the end of s1
 */
 
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)

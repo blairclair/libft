@@ -14,7 +14,7 @@
 
 /*
 Copies len bytes from string src to string dst while supporting
-the overlap.
+the overlap
 */
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

@@ -12,6 +12,9 @@
 
 #include "../includes/libft.h"
 
+/*
+Writes len bytes of c to string b
+*/
 
 void	*ft_memset(void *b, int c, size_t len)
 {

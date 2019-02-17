@@ -12,6 +12,11 @@
 
 #include "../includes/libft.h"
 
+/*
+Takes in the address of a pointer to a t_list node and frees it and sets 
+it to NULL
+*/
+
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
 	(*del)((*alst)->content, (*alst)->content_size);

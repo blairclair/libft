@@ -3,7 +3,16 @@ Libft is a beginner project at 42 Silicon Valley to reprogram some c standart li
 
 # What kind of functions are in libft?
 
-There are three main types of functions in my libft. List functions, memory functions, printing functions, string functions, and miscellanious other functions. 
+List functions: ft_lstadd, ft_lstdel, ft_lstdelone, ft_lstiter, ft_lstmap, and ft_lstnew.
+
+Memory functions: ft_memalloc, ft_memccpy, ft_memchr, ft_memcmp, ft_memcpy, ft_memdel, ft_memmove, and ft_memset.
+
+Print functions: ft_putchar_fd, ft_putchar, ft_putendl_fd, ft_putendl,
+ft_putnbr_fd, ft_putnbr, ft_putstr_fd, and ft_putstr.
+
+String functions: ft_strcat, ft_strchr, ft_strclr, ft_strcmp, ft_strcpy, ft_strdel, ft_strdup, ft_strequ, ft_striter, ft_striteri, ft_striteri, ft_strjoin, ft_strlcat, ft_strlen, ft_strmap, ft_strmapi, ft_strncat, ft_strncmp, ft_strncpy, ft_strnequ, ft_strnew, ft_strnstr, ft_strrchr,
+ft_strsplit, ft_strstr, ft_strsub, ft_strtrim.
+
 
 # How do I run libft?
 

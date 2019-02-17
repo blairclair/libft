@@ -14,7 +14,7 @@
 
 /*
 Locates the last occurence of c in string s and
-returns a pointer to it.
+returns a pointer to it
 */
 
 char	*ft_strrchr(const char *s, int c)

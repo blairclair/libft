@@ -14,7 +14,7 @@
 
 /*
 Calls the function f with one parameter on every
-character in string str.
+character in string str
 */
 
 void	ft_striter(char *str, void (*f)(char *))

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-Writes a string to the file descriptor passed in.
+Writes a string to the file descriptor passed in
 */
 
 #include "../includes/libft.h"

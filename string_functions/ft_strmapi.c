@@ -15,7 +15,7 @@
 /*
 Applies the function f to each character of the string passed
 as argument by giving its index as first argument to create and allocate a
-new string resulting from the successive applications of f.
+new string resulting from the successive applications of f
 */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
