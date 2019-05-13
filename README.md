@@ -1,4 +1,4 @@
-# libft
+# LIBFT
 Libft is a beginner project at 42 Silicon Valley to reprogram some c standart library functions as well as create original functions for future use.
 
 # What kind of functions are in libft?
